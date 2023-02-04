@@ -108,6 +108,7 @@ class FBAuthController {
     }
     
     setGreeting(req, res, next) {
+        // 招呼語，可以依據locale對來自不同地區的人顯示不同的招呼語
         const postData = {
             greeting: [
                 {
@@ -137,6 +138,7 @@ class FBAuthController {
     }
 
     setIceBreakers(req, res, next) {
+        // 破冰問題，可以依據locale對來自不同地區的人顯示對應選項
         const postData = {
             ice_breakers: [
                 {
