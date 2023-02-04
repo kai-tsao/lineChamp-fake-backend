@@ -1,5 +1,8 @@
 name: Codeball
-on: [pull_request]
+on:
+  pull_request: {}
+  pull_request_review_comment:
+    types: [created, edited]
     
 permissions:
   pull-requests: write
@@ -12,7 +15,7 @@ jobs:
       - name: Codeball
         uses: sturdy-dev/codeball-action@v2.6.0
         with:
-          approvePullRequests: "false"
+          approvePullRequests: "true"
           labelPullRequestsWhenApproved: "true"
-          labelPullRequestsWhenReviewNeeded: "true"
+          labelPullRequestsWhenReviewNeeded: "false"
           failJobsWhenReviewNeeded: "false"
