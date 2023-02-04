@@ -1,8 +1,5 @@
 name: Codeball
-on:
-  pull_request: {}
-  pull_request_review_comment:
-    types: [created, edited]
+on: [pull_request]
 
 jobs:
   codeball_job:
@@ -10,9 +7,9 @@ jobs:
     name: Codeball
     steps:
       - name: Codeball
-        uses: sturdy-dev/codeball-action@v2
+        uses: sturdy-dev/codeball-action@v2.6.0
         with:
-          approvePullRequests: "true"
+          approvePullRequests: "false"
           labelPullRequestsWhenApproved: "true"
-          labelPullRequestsWhenReviewNeeded: "false"
+          labelPullRequestsWhenReviewNeeded: "true"
           failJobsWhenReviewNeeded: "false"
