@@ -12,6 +12,10 @@ class ResponseMaker {
     static getSuccessResponse(data) {
         return { status: "success", message: "success", data: data };
     }
+
+    static getErrorResponse(message) {
+        return { status: "error", message: message };
+    }
 }
 
 module.exports.AppInfo = AppInfo;
