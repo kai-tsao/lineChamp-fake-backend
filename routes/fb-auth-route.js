@@ -6,7 +6,6 @@ const FBAuthController = require('../controllers/fb-auth-controller');
 const fbAuth = new FBAuthController();
 
 router.get('/status', isFBLoggedIn, fbAuth.status);
-// router.get('/popupEnd', isFBLoggedIn, fbAuth.popupEnd);
 router.get('/popupEnd', fbAuth.popupEnd);
 router.get('/logout', fbAuth.logout);
 router.get('/logoutRedirect', fbAuth.logoutRedirect);
